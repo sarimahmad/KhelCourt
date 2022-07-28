@@ -4,13 +4,13 @@ import {connect} from 'react-redux';
 
 import styles from './styles';
 
-const Home = props => {
+const Tournament = props => {
   useEffect(() => {
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+      <Text>Tournament</Text>
     </View>
   );
 };
@@ -33,4 +33,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Tournament);

@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text} from 'react-native';
 import {connect} from 'react-redux';
+import constant from '../../utility/constant';
 
 import styles from './styles';
 
-const Home = props => {
+const AuthMain = props => {
   useEffect(() => {
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+      <Text style={{fontFamily: constant.interExtraBold, color: constant.white}}>AuthMain</Text>
     </View>
   );
 };
@@ -33,4 +34,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(AuthMain);

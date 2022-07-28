@@ -11,15 +11,15 @@ export default {
   //google Key
   googleKey: 'AIzaSyACh6WdEQSVQcJGNYaDVvrrZyLgeAfSQJM',
   //Font Family
-  PoppinsBlack: 'Poppins-Black',
-  PoppinsBold: 'Poppins-Bold',
-  PoppinsExtraBold: 'Poppins-ExtraBold',
-  PoppinsExtraLight: 'Poppins-ExtraLight',
-  PoppinsLight: 'Poppins-Light',
-  PoppinsMedium: 'Poppins-Medium',
-  PoppinsRegular: 'Poppins-Regular',
-  PoppinsSemiBold: 'Poppins-SemiBold',
-  PoppinsThin: 'Poppins-Thin',
+  interBlack: 'Inter-Black',
+  interBold: 'Inter-Bold',
+  interExtraBold: 'Inter-ExtraBold',
+  interExtraLight: 'Inter-ExtraLight',
+  interLight: 'Inter-Light',
+  interMedium: 'Inter-Medium',
+  interMedium: 'Inter-Regular',
+  interSeiBold: 'Inter-SemiBold',
+  interThin: 'Inter-Thin',
 
   //Colors
   primaryColor: '#FEA729',

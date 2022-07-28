@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import styles from './styles';
 
-const Home = props => {
+const Profile = props => {
   useEffect(() => {
   }, []);
 
@@ -33,4 +33,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);

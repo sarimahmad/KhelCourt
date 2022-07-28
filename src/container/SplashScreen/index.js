@@ -7,7 +7,7 @@ const SplashScreen = props => {
     setTimeout(() => {
       if (props.userData == null) {
         console.log('props.userDatalogin', props.userData);
-        props.navigation.replace('Login');
+        props.navigation.replace('AuthMain');
       } else {
         console.log('props.userDatabottom', props.userData);
         props.navigation.replace('bottomTab');

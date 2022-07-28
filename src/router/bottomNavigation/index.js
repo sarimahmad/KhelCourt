@@ -4,19 +4,17 @@ import * as React from 'react';
 import {View, Dimensions, SafeAreaView} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
-// import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-// import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import homeScreen from '../../container/home';
-import eventScreen from '../../container/events';
-import feebbackScreen from '../../container/feedback';
-import settingScreen from '../../container/Settings';
-import AddEventScreen from '../../container/AddEvent';
+import Home from '../../container/Home';
+import Booking from '../../container/Booking';
+import Notification from '../../container/Notification';
+import Profile from '../../container/Profile';
+import Tournament from '../../container/Tournament';
 import constant from '../../utility/constant';
-import {} from 'react-native-safe-area-context';
+
 const Tab = createBottomTabNavigator();
 const windowHeight = Dimensions.get('window').height;
 
@@ -31,30 +29,30 @@ function App(props) {
           tabBarActiveTintColor: constant.primaryColor,
         }}>
         <Tab.Screen
-          name="home"
-          component={homeScreen}
+          name="Bookings"
+          component={Booking}
           options={{
-            tabBarLabel: 'Users',
+            tabBarLabel: 'Bookings',
             tabBarIcon: ({color, size}) => (
               <Icon name="users" color={color} size={tabIconSize} />
             ),
           }}
         />
         <Tab.Screen
-          name="event"
-          component={eventScreen}
+          name="Tournaments"
+          component={Tournament}
           options={{
-            tabBarLabel: 'Event',
+            tabBarLabel: 'Tournaments',
             tabBarIcon: ({color, size}) => (
               <MaterialIcons name="event" color={color} size={tabIconSize} />
             ),
           }}
         />
         <Tab.Screen
-          name="feebback"
-          component={feebbackScreen}
+          name="Home"
+          component={Home}
           options={{
-            tabBarLabel: 'Suggestion',
+            tabBarLabel: 'Home',
             tabBarIcon: ({color, size}) => (
               <MaterialCommunityIcons
                 name="comment-text-outline"
@@ -65,10 +63,24 @@ function App(props) {
           }}
         />
         <Tab.Screen
-          name="setting"
-          component={settingScreen}
+          name="Notification"
+          component={Notification}
           options={{
-            tabBarLabel: 'Settings',
+            tabBarLabel: 'Notification',
+            tabBarIcon: ({color, size}) => (
+              <Ionicons
+                name="md-settings-sharp"
+                color={color}
+                size={tabIconSize}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Profile"
+          component={Profile}
+          options={{
+            tabBarLabel: 'Profile',
             tabBarIcon: ({color, size}) => (
               <Ionicons
                 name="md-settings-sharp"
