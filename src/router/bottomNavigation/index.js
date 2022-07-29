@@ -8,7 +8,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import Home from '../../container/Home';
+import Home from '../../container/HomeScreen';
 import Booking from '../../container/Booking';
 import Notification from '../../container/Notification';
 import Profile from '../../container/Profile';
