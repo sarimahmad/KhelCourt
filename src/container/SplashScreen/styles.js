@@ -9,4 +9,9 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  image: {
+    height: constant.ScreenHeight,
+    width: constant.ScreenWidth,
+    resizeMode: 'stretch',
+  }
 });

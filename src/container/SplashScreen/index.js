@@ -10,7 +10,7 @@ const SplashScreen = props => {
         props.navigation.replace('AuthMain');
       } else {
         console.log('props.userDatabottom', props.userData);
-        props.navigation.replace('bottomTab');
+        props.navigation.replace('Main');
       }
     }, 2000);
   }, []);
@@ -18,8 +18,8 @@ const SplashScreen = props => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../../assets/images/splash.jpeg')}
-        style={{borderRadius: 200}}
+        source={require('../../assets/images/splash.jpg')}
+        style={styles.image}
       />
     </View>
   );

@@ -7,6 +7,11 @@ export default {
   //Screen Height Width
   ScreenHeight: height,
   ScreenWidth: width,
+  margin16: (height / 50),
+  margin64: (height / 12.68),
+  margin12: (height / 67.61),
+  margin50: (height / 16.12),
+  margin47: height /17.2,
 
   //google Key
   googleKey: 'AIzaSyACh6WdEQSVQcJGNYaDVvrrZyLgeAfSQJM',
@@ -22,11 +27,15 @@ export default {
   interThin: 'Inter-Thin',
 
   //Colors
-  primaryColor: '#FEA729',
+  primaryColor: '#E37E3C',
+  secondary: '#67A079',
+  facebookColor: '#0078FF',
   black:'black',
   darkBlue: '#102733',
   tabColor: '#152F3E',
-  whiteGrey: '#eee',
+  whiteGrey: 'rgba(200,200,200,0.5)',
+  noSelectedBlack: '#6C7072',
+  selectedBlack: '#090A0A',
   darkGrey: '#495057',
   mediumGrey: '#6e6969',
   white: 'rgba(255,255,255,1)',
