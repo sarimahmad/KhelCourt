@@ -5,7 +5,7 @@ import constant from '../../utility/constant';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: constant.darkBlue,
+    backgroundColor: constant.white,
     justifyContent: 'center',
     alignItems: 'center',
   },

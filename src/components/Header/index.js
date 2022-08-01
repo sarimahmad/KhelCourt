@@ -13,6 +13,7 @@ const Header = ({
   centerTextColor,
   leftIcon,
   rightIcon,
+  rightComponent,
 }) => {
   return (
     <View
@@ -53,11 +54,11 @@ const Header = ({
       </View>
       <View style={{flex: 0.15, alignItems: 'flex-end', paddingRight: '2%'}}>
         {rightPress != undefined && rightPress != null && (
-          <TouchableOpacity
-          onPress={rightPress}>
+          <TouchableOpacity onPress={rightPress}>
             <Ionicons size={35} color={rightIcon.color} name={rightIcon.name} />
           </TouchableOpacity>
         )}
+        {rightComponent && rightComponent()}
       </View>
     </View>
   );

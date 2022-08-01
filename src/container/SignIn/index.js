@@ -35,10 +35,10 @@ const SignIn = props => {
             <Text style={{ color: constant.primaryColor }}> Forget Password</Text> 
           </Text>
           <CustomBtn
-            centerText={'Sign Up'}
+            centerText={'Sign In'}
             rightIconSize={24}
             customMarginTop={constant.margin20}
-            onPress={() => console.log('Login')}
+            onPress={() => props.navigation.navigate('Main')}
           />
         </KeyboardAvoidingView>
       </SafeAreaView>
