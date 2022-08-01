@@ -1,4 +1,4 @@
-package com.khelcourt;
+package com.app.khelcourt;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
