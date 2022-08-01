@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>663198288800-25muf8b1v0nfcu2m99lbis993behtr6b.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.663198288800-25muf8b1v0nfcu2m99lbis993behtr6b</string>
+	<key>API_KEY</key>
+	<string>AIzaSyArt9NesmPH8R45om2FFAB1VuYK_Rbhv1o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>663198288800</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.app.khelcourt</string>
+	<key>PROJECT_ID</key>
+	<string>khelcourt-1d85d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>khelcourt-1d85d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:663198288800:ios:33546c1803b12bbf5432c5</string>
+</dict>
+</plist>
