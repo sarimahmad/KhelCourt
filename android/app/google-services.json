@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "663198288800",
+    "project_id": "khelcourt-1d85d",
+    "storage_bucket": "khelcourt-1d85d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663198288800:android:c3de6543002e67585432c5",
+        "android_client_info": {
+          "package_name": "com.app.khelcourt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663198288800-bcom919e8q0c759dfvgdvac6nmspchbd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4gN56WOzUZcD5DUjjupNajfmZd7JQFHM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663198288800-bcom919e8q0c759dfvgdvac6nmspchbd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

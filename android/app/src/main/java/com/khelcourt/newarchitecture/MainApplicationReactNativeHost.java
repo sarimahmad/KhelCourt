@@ -1,4 +1,4 @@
-package com.khelcourt.newarchitecture;
+package com.app.khelcourt.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.khelcourt.BuildConfig;
-import com.khelcourt.newarchitecture.components.MainComponentsRegistry;
-import com.khelcourt.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.app.khelcourt.BuildConfig;
+import com.app.khelcourt.newarchitecture.components.MainComponentsRegistry;
+import com.app.khelcourt.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
