@@ -20,14 +20,14 @@ const Header = ({
         styles.MianView,
         {backgroundColor: backColor ? backColor : constant.black},
       ]}>
-      <View style={{flex: 0.2}}>
+      <View style={{flex: 0.15, alignItems: 'center'}}>
         {leftPress != undefined && leftPress != null && (
           <TouchableOpacity onPress={leftPress}>
-            <Ionicons size={40} color={leftIcon.color} name={leftIcon.name} />
+            <Ionicons size={24} color={leftIcon.color} name={leftIcon.name} />
           </TouchableOpacity>
         )}
       </View>
-      <View style={{flex: 0.6, justifyContent: 'center', alignItems: 'center'}}>
+      <View style={{flex: 0.7, justifyContent: 'center', alignItems: 'center'}}>
         {centerText != undefined &&
           centerText != null &&
           centerText.trim().length > 0 && (
@@ -51,7 +51,7 @@ const Header = ({
           />
         )}
       </View>
-      <View style={{flex: 0.2, alignItems: 'flex-end', paddingRight: '2%'}}>
+      <View style={{flex: 0.15, alignItems: 'flex-end', paddingRight: '2%'}}>
         {rightPress != undefined && rightPress != null && (
           <TouchableOpacity
           onPress={rightPress}>
@@ -65,7 +65,7 @@ const Header = ({
 
 const styles = StyleSheet.create({
   MianView: {
-    height: 55,
+    height: 48,
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
@@ -79,8 +79,8 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   CenterText: {
-    fontSize: 20,
-    fontFamily: constant.PoppinsExtraBold,
+    fontSize: 18,
+    fontFamily: constant.interMedium,
   },
   CenterIcon: {
     height: 38,

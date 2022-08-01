@@ -8,16 +8,9 @@ export default StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: constant.white,
   },
-  backImage: {
-    position: 'absolute',
-    height: constant.ScreenHeight,
-    width: constant.ScreenWidth,
-    resizeMode: 'stretch',
-    marginTop: 12,
-  },
   logoImage: {
-    height: 82.3,
-    width: 71.4,
+    height: 82,
+    width: 71,
     resizeMode: 'contain',
   },
   welcomeText: {

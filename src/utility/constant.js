@@ -12,6 +12,7 @@ export default {
   margin12: (height / 67.61),
   margin50: (height / 16.12),
   margin47: height /17.2,
+  margin20: height / 40.6,
 
   //google Key
   googleKey: 'AIzaSyACh6WdEQSVQcJGNYaDVvrrZyLgeAfSQJM',
@@ -22,7 +23,7 @@ export default {
   interExtraLight: 'Inter-ExtraLight',
   interLight: 'Inter-Light',
   interMedium: 'Inter-Medium',
-  interMedium: 'Inter-Regular',
+  interRegular: 'Inter-Regular',
   interSeiBold: 'Inter-SemiBold',
   interThin: 'Inter-Thin',
 
@@ -30,6 +31,8 @@ export default {
   primaryColor: '#E37E3C',
   secondary: '#67A079',
   facebookColor: '#0078FF',
+  borderColor: '#E3E5E5',
+  titleLightColor: '#757575',
   black:'black',
   darkBlue: '#102733',
   tabColor: '#152F3E',
