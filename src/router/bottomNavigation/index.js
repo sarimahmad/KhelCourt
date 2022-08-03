@@ -1,7 +1,7 @@
 // In App.js in a new project
 
 import * as React from 'react';
-import {Image, Dimensions, SafeAreaView} from 'react-native';
+import {Image, Dimensions, SafeAreaView, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -23,7 +23,6 @@ const tabIconSize = 27;
 function App(props) {
   return (
     <>
-      <SafeAreaView style={{backgroundColor: constant.white}} />
       <Tab.Navigator
         screenOptions={{
           headerShown: false,

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, Image, TouchableOpacity, FlatList} from 'react-native';
+import {View, Text, Image, TouchableOpacity, FlatList,SafeAreaView} from 'react-native';
 import {connect} from 'react-redux';
 import Header from '../../components/Header';
 import styles from './styles';
@@ -73,6 +73,8 @@ const Booking = props => {
   };
   return (
     <View style={styles.container}>
+            <SafeAreaView />
+
       <Header
         centerText={'KhelCourt'}
         backColor={constant.white}
