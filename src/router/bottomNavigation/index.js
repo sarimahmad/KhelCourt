@@ -27,7 +27,8 @@ function App(props) {
         screenOptions={{
           headerShown: false,
           tabBarActiveTintColor: constant.primaryColor,
-        }}>
+          
+        }} initialRouteName={"Home"}>
         <Tab.Screen
           name="Bookings"
           component={Booking}
