@@ -14,6 +14,7 @@ const Header = ({
   leftIcon,
   rightIcon,
   rightComponent,
+  leftComponent,
 }) => {
   return (
     <View
@@ -27,6 +28,7 @@ const Header = ({
             <Ionicons size={24} color={leftIcon.color} name={leftIcon.name} />
           </TouchableOpacity>
         )}
+         {leftComponent && leftComponent()}
       </View>
       <View style={{flex: 0.7, justifyContent: 'center', alignItems: 'center'}}>
         {centerText != undefined &&

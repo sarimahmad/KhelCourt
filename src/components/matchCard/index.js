@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   tabText: {
     fontSize: 16,
-    fontWeight: '400',
+    fontFamily: constant.interMedium,
   },
   innerContainer: {
     justifyContent: 'space-between',
@@ -88,11 +88,11 @@ const styles = StyleSheet.create({
   },
   innercontanerText: {
     fontSize: 14,
-    fontWeight: '500',
+    fontFamily: constant.interRegular,
   },
   cortText: {
     fontSize: 14,
-    fontWeight: '300',
+    fontFamily: constant.interLight,
     color: '#757575',
   },
 });

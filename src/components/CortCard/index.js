@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
-import {connect} from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { connect } from 'react-redux';
 import Header from '../Header';
 import constant from '../../utility/constant';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -8,7 +8,9 @@ import Entypo from 'react-native-vector-icons/Entypo';
 
 const CortCard = props => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      onPress={props.onPress}
+      style={styles.container}>
       <Image
         source={require('../../assets/images/coetImage.png')}
         style={styles.imageSize}
@@ -22,7 +24,7 @@ const CortCard = props => {
       <View style={styles.HeartView}>
         <AntDesign name="hearto" color={'white'} size={20} />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

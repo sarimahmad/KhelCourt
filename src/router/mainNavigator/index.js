@@ -9,6 +9,7 @@ import bottomTab from '../bottomNavigation';
 import AuthMain from '../../container/AuthMain';
 import SignUp from '../../container/SignUp';
 import SignIn from '../../container/SignIn';
+import Detail from '../../container/Detail';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,7 @@ function App(props) {
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="Login" component={SignIn} />
         <Stack.Screen name="Main" component={bottomTab} />
+        <Stack.Screen name="Detail" component={Detail} />
       </Stack.Navigator>
     </NavigationContainer>
   );

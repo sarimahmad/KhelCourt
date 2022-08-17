@@ -104,12 +104,8 @@ function App(props) {
             tabBarLabel: 'Profile',
             tabBarIcon: ({color, size, focused}) => (
               <Image
-                style={{height: iconHeight, width: iconWidth}}
-                source={
-                  focused
-                    ? require('../../assets/images/BotomIcons/cupActive.png')
-                    : require('../../assets/images/BotomIcons/cup.png')
-                }
+                style={{height: iconHeight, width: iconWidth, borderRadius: 12}}
+                source={require('../../assets/images/userimage.png') }
               />
             ),
           }}

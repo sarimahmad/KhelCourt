@@ -11,8 +11,10 @@ export default {
   margin64: (height / 12.68),
   margin12: (height / 67.61),
   margin50: (height / 16.12),
+  margin56: (height / 14.5),
   margin47: height /17.2,
   margin20: height / 40.6,
+  margin24: height / 33.8,
 
   //google Key
   googleKey: 'AIzaSyACh6WdEQSVQcJGNYaDVvrrZyLgeAfSQJM',
@@ -37,6 +39,7 @@ export default {
   darkBlue: '#102733',
   tabColor: '#152F3E',
   whiteGrey: 'rgba(200,200,200,0.5)',
+  whiteLight: '#fafafa',
   noSelectedBlack: '#6C7072',
   selectedBlack: '#090A0A',
   darkGrey: '#495057',

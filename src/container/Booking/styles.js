@@ -31,7 +31,7 @@ export default StyleSheet.create({
   },
   tabText: {
     fontSize: 16,
-    fontWeight: '400',
+    fontFamily: constant.interRegular,
   },
   innerContainer: {
     justifyContent: 'space-between',

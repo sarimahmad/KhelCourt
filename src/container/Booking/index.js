@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import {View, Text, Image, TouchableOpacity, FlatList,SafeAreaView} from 'react-native';
-import {connect} from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { View, Text, Image, TouchableOpacity, FlatList, SafeAreaView } from 'react-native';
+import { connect } from 'react-redux';
 import Header from '../../components/Header';
 import styles from './styles';
 import constant from '../../utility/constant';
@@ -31,14 +31,15 @@ const DATA = [
 ];
 const Booking = props => {
   const [tab, setTab] = useState(true);
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
-  const renderItem = ({item}) => {
+  const renderItem = ({ item }) => {
     return <MatchCard />;
   };
-  const renderFilter = () => {
+  const renderFilter = (item, index) => {
     return (
       <View
+        key={item.id.toString}
         style={{
           backgroundColor: 'rgba(227, 126, 60, 0.1)',
           flexDirection: 'row',
@@ -48,8 +49,8 @@ const Booking = props => {
           borderRadius: 20,
           marginHorizontal: 1,
         }}>
-        <Text style={[styles.tabText, {color: '#E37E3C'}]}>collection</Text>
-        <Entypo style={[{color: '#E37E3C'}]} name="cross" size={15} />
+        <Text style={[styles.tabText, { color: '#E37E3C' }]}>collection</Text>
+        <Entypo style={[{ color: '#E37E3C' }]} name="cross" size={15} />
       </View>
     );
   };
@@ -73,7 +74,7 @@ const Booking = props => {
   };
   return (
     <View style={styles.container}>
-            <SafeAreaView />
+      <SafeAreaView />
 
       <Header
         centerText={'KhelCourt'}
@@ -81,20 +82,20 @@ const Booking = props => {
         rightComponent={() => (
           <TouchableOpacity>
             <Image
-              style={{height: 25, width: 25}}
+              style={{ height: 25, width: 25 }}
               source={require('../../assets/images/icon/shoppingCart.png')}
             />
           </TouchableOpacity>
         )}
       />
       <View style={styles.coverContainer}>
-        <View style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+        <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
           <Text style={styles.HeaderText}>Total Bookings</Text>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Text style={styles.HeaderText}>All</Text>
             <TouchableOpacity>
               <Image
-                style={{height: 25, width: 25, marginLeft: 10}}
+                style={{ height: 25, width: 25, marginLeft: 10 }}
                 source={require('../../assets/images/BotomIcons/calendar.png')}
               />
             </TouchableOpacity>
@@ -103,19 +104,19 @@ const Booking = props => {
         <Text
           style={[
             styles.HeaderText,
-            {color: constant.primaryColor, fontSize: 18},
+            { color: constant.primaryColor, fontSize: 18 },
           ]}>
           240
         </Text>
       </View>
 
-      <View style={{flexDirection: 'row', marginTop: '5%'}}>
+      <View style={{ flexDirection: 'row', marginTop: '5%' }}>
         <TouchableOpacity
           style={[tab == false && styles.tabActiveStyle, styles.tabMainStyle]}
           onPress={() => setTab(false)}>
           <Text
             style={[
-              tab == false && {color: constant.primaryColor},
+              tab == false && { color: constant.primaryColor },
               styles.tabText,
             ]}>
             Upcomming
@@ -126,7 +127,7 @@ const Booking = props => {
           onPress={() => setTab(true)}>
           <Text
             style={[
-              tab == true && {color: constant.primaryColor},
+              tab == true && { color: constant.primaryColor },
               styles.tabText,
             ]}>
             Completed
@@ -154,16 +155,16 @@ const Booking = props => {
           }}>
           <Text style={styles.tabText}>Filter</Text>
           <Image
-            style={{height: 25, width: 25, marginLeft: 10}}
+            style={{ height: 25, width: 25, marginLeft: 10 }}
             source={require('../../assets/images/icon/setting-4.png')}
           />
         </TouchableOpacity>
-        {DATA.map(item => renderFilter(item))}
+        {DATA.map((item, index) => renderFilter(item, index))}
       </View>
       <FlatList
         data={DATA}
         renderItem={renderItem}
-        keyExtractor={item => item.id}
+        keyExtractor={(item, index) => index.toString()}
         showsVerticalScrollIndicator={false}
       />
       <View></View>

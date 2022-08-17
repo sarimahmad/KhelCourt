@@ -10,11 +10,11 @@ import {
   FlatList,
 } from 'react-native';
 import {connect} from 'react-redux';
+
 import constant from '../../utility/constant';
 import Header from '../../components/Header';
 import CustomBtn from '../../components/CustomBtn';
 import styles from './styles';
-import Feather from 'react-native-vector-icons/Feather';
 import CortCard from '../../components/CortCard';
 const Home = props => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -178,7 +178,7 @@ const Home = props => {
           <FlatList
             horizontal
             data={[1, 2, 3, 4, 5, 6]}
-            renderItem={() => <CortCard />}
+            renderItem={({item, index}) => <CortCard onPress={() => props.navigation.navigate('Detail', {item: item})} />}
             keyExtractor={item => item.id}
             showsHorizontalScrollIndicator={false}
           />
