@@ -10,9 +10,9 @@ import AuthMain from '../../container/AuthMain';
 import SignUp from '../../container/SignUp';
 import SignIn from '../../container/SignIn';
 import Detail from '../../container/Detail';
+import TeamDetail from '../../container/TeamDetails';
 
 const Stack = createNativeStackNavigator();
-
 
 function App(props) {
   return (
@@ -28,6 +28,8 @@ function App(props) {
         <Stack.Screen name="Login" component={SignIn} />
         <Stack.Screen name="Main" component={bottomTab} />
         <Stack.Screen name="Detail" component={Detail} />
+        <Stack.Screen name="TeamDetail" component={TeamDetail} />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

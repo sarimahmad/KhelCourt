@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import React, {useEffect, useState} from 'react';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 
 import constant from '../../utility/constant';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -9,39 +9,59 @@ import Entypo from 'react-native-vector-icons/Entypo';
 const DetailInfo = props => {
   return (
     <View style={styles.container}>
-      <Text style={[styles.fontSize16, { marginTop: 24 }]}>
-        Description
-      </Text>
-      <Text style={[styles.fontSize12, { marginTop: 8 }]}>
-        Play in Arena is situated in the middle of the Bagh-e-Jinnah surrounded by Nature.
-        The Greenery around it lifts the mood for playing a beautiful game. A FACE TO BE
+      <Text style={[styles.fontSize16, {marginTop: 24}]}>Description</Text>
+      <Text style={[styles.fontSize12, {marginTop: 8}]}>
+        Play in Arena is situated in the middle of the Bagh-e-Jinnah surrounded
+        by Nature. The Greenery around it lifts the mood for playing a beautiful
+        game. A FACE TO BE
       </Text>
       <View style={styles.divider} />
-      <Text style={[styles.fontSize16, { marginTop: 16 }]}>
-        Amenities
-      </Text>
-      <View style={[styles.rowViewAC, { marginTop: 16 }]}>
-        <Image style={styles.rowIcon} source={require('../../assets/images/parking.png')} />
-        <Text style={[styles.fontSize16, { marginLeft: 16, fontFamily: constant.interRegular }]}>
+      <Text style={[styles.fontSize16, {marginTop: 16}]}>Amenities</Text>
+      <View style={[styles.rowViewAC, {marginTop: 16}]}>
+        <Image
+          style={styles.rowIcon}
+          source={require('../../assets/images/parking.png')}
+        />
+        <Text
+          style={[
+            styles.fontSize16,
+            {marginLeft: 16, fontFamily: constant.interRegular},
+          ]}>
           Free Parking
         </Text>
       </View>
-      <View style={[styles.rowViewAC, { marginTop: 24 }]}>
-        <Image style={styles.rowIcon} source={require('../../assets/images/light.png')} />
-        <Text style={[styles.fontSize16, { marginLeft: 16, fontFamily: constant.interRegular }]}>
+      <View style={[styles.rowViewAC, {marginTop: 24}]}>
+        <Image
+          style={styles.rowIcon}
+          source={require('../../assets/images/light.png')}
+        />
+        <Text
+          style={[
+            styles.fontSize16,
+            {marginLeft: 16, fontFamily: constant.interRegular},
+          ]}>
           Flood Lights
         </Text>
       </View>
-      <View style={[styles.rowViewAC, { marginTop: 24 }]}>
-        <Image style={styles.rowIcon} source={require('../../assets/images/generator.png')} />
-        <Text style={[styles.fontSize16, { marginLeft: 16, fontFamily: constant.interRegular }]}>
+      <View style={[styles.rowViewAC, {marginTop: 24}]}>
+        <Image
+          style={styles.rowIcon}
+          source={require('../../assets/images/generator.png')}
+        />
+        <Text
+          style={[
+            styles.fontSize16,
+            {marginLeft: 16, fontFamily: constant.interRegular},
+          ]}>
           Generator Backup
         </Text>
       </View>
-      <View style={styles.divider} />
-      <Text style={[styles.fontSize16, { marginTop: 16 }]}>
-        You'll be here
-      </Text>
+      <TouchableOpacity
+        onPress={props.LoadMorePress}
+        style={styles.LoadMoreBtn}>
+        <Text style={styles.loadMoreText}>Load More</Text>
+      </TouchableOpacity>
+      <Text style={[styles.fontSize16, {marginTop: 16}]}>You'll be here</Text>
       <MapView
         provider={PROVIDER_GOOGLE} // remove if not using Google Maps
         style={styles.map}
@@ -50,16 +70,14 @@ const DetailInfo = props => {
           longitude: -77.787079,
           latitudeDelta: 0.015,
           longitudeDelta: 0.0121,
-        }}
-      >
-      </MapView>
+        }}></MapView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
   fontSize16: {
     fontSize: 16,
@@ -84,6 +102,21 @@ const styles = StyleSheet.create({
     height: 24,
     width: 24,
     resizeMode: 'contain',
+  },
+  LoadMoreBtn: {
+    width: '100%',
+    height: 48,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: constant.borderColor,
+    borderRadius: 25,
+    marginTop: 24,
+  },
+  loadMoreText: {
+    fontFamily: constant.interRegular,
+    fontSize: 16,
+    color: constant.primaryColor,
   },
   map: {
     height: constant.ScreenWidth - 48,

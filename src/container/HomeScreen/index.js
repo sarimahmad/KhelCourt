@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useState} from 'react';
 import {
   View,
@@ -9,8 +10,6 @@ import {
   ImageBackground,
   FlatList,
 } from 'react-native';
-import {connect} from 'react-redux';
-
 import constant from '../../utility/constant';
 import Header from '../../components/Header';
 import CustomBtn from '../../components/CustomBtn';
@@ -69,7 +68,7 @@ const Home = props => {
                     styles.switchInnerWrapper,
                     {
                       backgroundColor:
-                        selectedTab == 0 ? constant.white : constant.whiteGrey,
+                        selectedTab === 0 ? constant.white : constant.whiteGrey,
                     },
                   ]}>
                   <Text
@@ -77,7 +76,7 @@ const Home = props => {
                       styles.font12,
                       {
                         color:
-                          selectedTab == 0
+                          selectedTab === 0
                             ? constant.selectedBlack
                             : constant.noSelectedBlack,
                       },
@@ -171,14 +170,57 @@ const Home = props => {
             <Text style={{fontSize: 16, fontFamily: constant.interMedium}}>
               Court
             </Text>
-            <Text style={{fontSize: 16, fontFamily: constant.interMedium}}>
+            <Text
+              onPress={() => props.navigation.navigate('ShowAll')}
+              style={{fontSize: 16, fontFamily: constant.interMedium}}>
               Show All
             </Text>
           </View>
           <FlatList
             horizontal
             data={[1, 2, 3, 4, 5, 6]}
-            renderItem={({item, index}) => <CortCard onPress={() => props.navigation.navigate('Detail', {item: item})} />}
+            renderItem={({item, index}) => (
+              <CortCard
+                UpperText={'Play-In Arena'}
+                LowerText={'Lawrence Garden, Mall Road LHR'}
+                Image={require('../../assets/images/coetImage.png')}
+                onPress={() =>
+                  props.navigation.navigate('Detail', {item: item})
+                }
+              />
+            )}
+            keyExtractor={item => item.id}
+            showsHorizontalScrollIndicator={false}
+          />
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              marginVertical: '3%',
+            }}>
+            <Text style={{fontSize: 16, fontFamily: constant.interMedium}}>
+              Teams
+            </Text>
+            <Text
+              onPress={() => props.navigation.navigate('ShowAll')}
+              style={{fontSize: 16, fontFamily: constant.interMedium}}>
+              Show All
+            </Text>
+          </View>
+
+          <FlatList
+            horizontal
+            data={[1, 2, 3, 4, 5, 6]}
+            renderItem={({item, index}) => (
+              <CortCard
+                UpperText={'Stalwarts FC'}
+                LowerText={'Lahore, Pakistan'}
+                Image={require('../../assets/images/teams.png')}
+                onPress={() =>
+                  props.navigation.navigate('Detail', {item: item})
+                }
+              />
+            )}
             keyExtractor={item => item.id}
             showsHorizontalScrollIndicator={false}
           />
@@ -188,22 +230,4 @@ const Home = props => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    userToken: state.authData.token,
-    userData: state.authData.userData,
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    onSetUserToken: data => {
-      dispatch(setAuthToken(data));
-    },
-    onSetUserData: data => {
-      dispatch(setAuthUser(data));
-    },
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default Home;

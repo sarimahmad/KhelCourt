@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 import constant from '../../utility/constant';
 import Feather from 'react-native-vector-icons/Feather';
 import Entypo from 'react-native-vector-icons/Entypo';
-const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>
+const B = props => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 
 const NotificationCard = props => {
   return (
@@ -16,7 +16,8 @@ const NotificationCard = props => {
           style={{height: 40, width: 40}}
         />
         <Text style={{width: '85%', fontFamily: constant.interRegular}}>
-          Play IN <B>Arena</B> confirmed your <B>booking of 7-8 PM</B>, July 20th
+          Play IN <B>Arena</B> confirmed your <B>booking of 7-8 PM</B>, July
+          20th
         </Text>
       </View>
       <Text

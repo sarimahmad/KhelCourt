@@ -1,5 +1,5 @@
-import { Platform, StyleSheet, Dimensions } from 'react-native';
-const { width, height } = Dimensions.get('window');
+import {Platform, StyleSheet, Dimensions} from 'react-native';
+const {width, height} = Dimensions.get('window');
 import constant from '../../utility/constant';
 
 export default StyleSheet.create({
@@ -8,14 +8,19 @@ export default StyleSheet.create({
     backgroundColor: constant.white,
   },
   SliderImg: {
-    borderTopRightRadius: 20,
-    borderTopLeftRadius: 20,
     height: 253,
   },
   AbsoluteHeaderWrapper: {
     position: 'absolute',
-    top: 0,
+    top: 25,
     width: constant.ScreenWidth,
+  },
+  rowJustify: {
+    flexDirection: 'row',
+    width: '100%',
+
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   headerBtnWrapper: {
     height: 32,

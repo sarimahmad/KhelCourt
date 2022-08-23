@@ -1,22 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
-import { connect } from 'react-redux';
-import Header from '../Header';
+import React, {useEffect, useState} from 'react';
+import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import constant from '../../utility/constant';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 
 const CortCard = props => {
   return (
-    <TouchableOpacity
-      onPress={props.onPress}
-      style={styles.container}>
-      <Image
-        source={require('../../assets/images/coetImage.png')}
-        style={styles.imageSize}
-      />
-      <Text style={styles.nametext}>Play-In Arena</Text>
-      <Text style={styles.locationtext}>Lawrence Garden, Mall Road LHR</Text>
+    <TouchableOpacity onPress={props.onPress} style={styles.container}>
+      <Image source={props.Image} style={styles.imageSize} />
+      <Text style={styles.nametext}>{props.UpperText}</Text>
+      <Text style={styles.locationtext}>{props.LowerText}</Text>
 
       <View style={styles.sideView}>
         <Text style={styles.sideText}>1 side</Text>
@@ -32,7 +25,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: constant.white,
     width: 188,
-    height: 199,
+    height: 205,
     paddingHorizontal: 8,
     paddingVertical: 8,
     borderRadius: 8,
@@ -45,11 +38,14 @@ const styles = StyleSheet.create({
   },
   nametext: {
     fontFamily: constant.interSeiBold,
-    fontSize: 15,
+    fontSize: 14,
+    marginTop: 8,
   },
   locationtext: {
     fontFamily: constant.interRegular,
-    fontSize: 12,
+    fontSize: 10,
+    marginTop: 5,
+    color: '#444444',
   },
   sideView: {
     position: 'absolute',

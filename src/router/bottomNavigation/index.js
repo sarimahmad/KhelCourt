@@ -7,19 +7,37 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../../container/HomeScreen';
 import Booking from '../../container/Booking';
 import Notification from '../../container/Notification';
 import Profile from '../../container/Profile';
 import Tournament from '../../container/Tournament';
 import constant from '../../utility/constant';
+import ShowAll from '../../container/ShowAll';
 
 const Tab = createBottomTabNavigator();
 const windowHeight = Dimensions.get('window').height;
-const iconHeight=24
-const iconWidth=24
+const iconHeight = 24;
+const iconWidth = 24;
 const tabIconSize = 27;
+const Stack = createNativeStackNavigator();
+
+function HomeStack(props) {
+  return (
+    <Stack.Navigator
+      initialRouteName="HomeScreen"
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <Stack.Screen name="HomeScreen" component={Home} />
+      <Stack.Screen name="ShowAll" component={ShowAll} />
+     
+    </Stack.Navigator>
+  );
+}
+
+
 function App(props) {
   return (
     <>
@@ -27,8 +45,8 @@ function App(props) {
         screenOptions={{
           headerShown: false,
           tabBarActiveTintColor: constant.primaryColor,
-          
-        }} initialRouteName={"Home"}>
+        }}
+        initialRouteName={'Home'}>
         <Tab.Screen
           name="Bookings"
           component={Booking}
@@ -65,12 +83,12 @@ function App(props) {
         />
         <Tab.Screen
           name="Home"
-          component={Home}
+          component={HomeStack}
           options={{
             tabBarLabel: 'Home',
             tabBarIcon: ({color, size, focused}) => (
               <Image
-                style={{height: iconHeight+3, width: iconWidth}}
+                style={{height: iconHeight + 3, width: iconWidth}}
                 source={
                   focused
                     ? require('../../assets/images/BotomIcons/mainActive.png')
@@ -105,7 +123,7 @@ function App(props) {
             tabBarIcon: ({color, size, focused}) => (
               <Image
                 style={{height: iconHeight, width: iconWidth, borderRadius: 12}}
-                source={require('../../assets/images/userimage.png') }
+                source={require('../../assets/images/userimage.png')}
               />
             ),
           }}

@@ -14,7 +14,7 @@ export default StyleSheet.create({
     borderRadius: 8,
     paddingHorizontal: 16,
     paddingVertical: 16,
-    marginBottom:constant.ScreenHeight*0.02
+    marginBottom: constant.ScreenHeight * 0.02,
   },
   HeaderText: {
     fontFamily: constant.interRegular,
@@ -33,6 +33,16 @@ export default StyleSheet.create({
     fontSize: 16,
     fontFamily: constant.interRegular,
   },
+  FilterView: {
+    backgroundColor: '#FAFAFA',
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-end',
+    paddingHorizontal: 15,
+    paddingVertical: 3,
+    borderRadius: 20,
+    marginVertical: 16,
+  },
   innerContainer: {
     justifyContent: 'space-between',
     flexDirection: 'row',
@@ -47,5 +57,16 @@ export default StyleSheet.create({
     fontSize: 14,
     fontWeight: '300',
     color: '#757575',
+  },
+  ShadowVideo: {
+    width: 43,
+    height: 32,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 20,
+  },
+  shadowText: {
+    fontFamily: constant.interRegular,
+    fontSize: 16,
   },
 });
