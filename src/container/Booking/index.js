@@ -15,6 +15,8 @@ import constant from '../../utility/constant';
 import Feather from 'react-native-vector-icons/Feather';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MatchCard from '../../components/matchCard';
+import CheckBox from 'react-native-vector-icons/AntDesign';
+
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -40,6 +42,8 @@ const DATA = [
 const Booking = props => {
   const [tab, setTab] = useState(true);
   const [filterModal, setfilterModal] = useState(false);
+  const [DateorPlace, setDateorPlace] = useState(true);
+  const [selectedBox, setSelectedBox] = useState(0);
   useEffect(() => {}, []);
 
   const renderItem = ({item}) => {
@@ -88,8 +92,10 @@ const Booking = props => {
       <Header
         centerText={'KhelCourt'}
         backColor={constant.white}
+        leftIcon={true}
+        leftPress={() => props.navigation.goBack()}
         rightComponent={() => (
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => props.navigation.navigate('Cart')}>
             <Image
               style={{height: 25, width: 25}}
               source={require('../../assets/images/icon/shoppingCart.png')}
@@ -232,20 +238,25 @@ const Booking = props => {
               height: constant.ScreenHeight / 2,
               backgroundColor: constant.white,
               borderRadius: 20,
+              paddingHorizontal: 24,
             }}>
-            <View style={{flexDirection: 'row', margin: 10}}>
+            <View style={{flexDirection: 'row', marginTop: 32}}>
               <TouchableOpacity
+                onPress={() => setDateorPlace(true)}
                 style={{
-                  backgroundColor: 'rgba(227, 126, 60, 0.1)',
+                  backgroundColor: DateorPlace
+                    ? 'rgba(227, 126, 60, 0.1)'
+                    : '#FAFAFA',
                   height: 32,
                   width: 82,
-                  borderRadius: 10,
+                  borderRadius: 15,
                   alignItems: 'center',
                   justifyContent: 'center',
+                  marginRight: 8,
                 }}>
                 <Text
                   style={{
-                    color: constant.primaryColor,
+                    color: DateorPlace ? constant.primaryColor : '#222222',
                     fontFamily: constant.interRegular,
                     fontSize: 14,
                   }}>
@@ -253,17 +264,20 @@ const Booking = props => {
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity
+                onPress={() => setDateorPlace(false)}
                 style={{
-                  backgroundColor: 'rgba(227, 126, 60, 0.1)',
+                  backgroundColor: !DateorPlace
+                    ? 'rgba(227, 126, 60, 0.1)'
+                    : '#FAFAFA',
                   height: 32,
                   width: 82,
-                  borderRadius: 10,
+                  borderRadius: 15,
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}>
                 <Text
                   style={{
-                    color: constant.primaryColor,
+                    color: !DateorPlace ? constant.primaryColor : '#222222',
                     fontFamily: constant.interRegular,
                     fontSize: 14,
                   }}>
@@ -271,6 +285,185 @@ const Booking = props => {
                 </Text>
               </TouchableOpacity>
             </View>
+            {DateorPlace ? (
+              <View>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    marginTop: 24,
+                  }}>
+                  <TouchableOpacity
+                    onPress={() =>
+                      setSelectedBox(
+                        selectedBox === 0 ||
+                          selectedBox === 2 ||
+                          selectedBox === 3 ||
+                          selectedBox === 4
+                          ? 1
+                          : 0,
+                      )
+                    }>
+                    {selectedBox === 1 ? (
+                      <CheckBox
+                        name="checksquareo"
+                        size={25}
+                        style={{marginRight: 16}}
+                        color={constant.primaryColor}
+                      />
+                    ) : (
+                      <View style={styles.EmptyBox} />
+                    )}
+                  </TouchableOpacity>
+                  <Text style={styles.PlayAreaText}>Play In</Text>
+                </View>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    marginTop: 24,
+                  }}>
+                  <TouchableOpacity
+                    onPress={() =>
+                      setSelectedBox(
+                        selectedBox === 0 ||
+                          selectedBox === 1 ||
+                          selectedBox === 3 ||
+                          selectedBox === 4
+                          ? 2
+                          : 0,
+                      )
+                    }>
+                    {selectedBox === 2 ? (
+                      <CheckBox
+                        name="checksquareo"
+                        size={25}
+                        style={{marginRight: 16}}
+                        color={constant.primaryColor}
+                      />
+                    ) : (
+                      <View style={styles.EmptyBox} />
+                    )}
+                  </TouchableOpacity>
+                  <Text style={styles.PlayAreaText}>Play On</Text>
+                </View>
+
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    marginTop: 24,
+                  }}>
+                  <TouchableOpacity
+                    onPress={() =>
+                      setSelectedBox(
+                        selectedBox === 0 ||
+                          selectedBox === 1 ||
+                          selectedBox === 2 ||
+                          selectedBox === 4
+                          ? 3
+                          : 0,
+                      )
+                    }>
+                    {selectedBox === 3 ? (
+                      <CheckBox
+                        name="checksquareo"
+                        size={25}
+                        style={{marginRight: 16}}
+                        color={constant.primaryColor}
+                      />
+                    ) : (
+                      <View style={styles.EmptyBox} />
+                    )}
+                  </TouchableOpacity>
+                  <Text style={styles.PlayAreaText}>Fifth Generation</Text>
+                </View>
+
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    marginTop: 24,
+                  }}>
+                  <TouchableOpacity
+                    onPress={() =>
+                      setSelectedBox(
+                        selectedBox === 0 ||
+                          selectedBox === 1 ||
+                          selectedBox === 2 ||
+                          selectedBox === 3
+                          ? 4
+                          : 0,
+                      )
+                    }>
+                    {selectedBox === 4 ? (
+                      <CheckBox
+                        name="checksquareo"
+                        size={25}
+                        style={{marginRight: 16}}
+                        color={constant.primaryColor}
+                      />
+                    ) : (
+                      <View style={styles.EmptyBox} />
+                    )}
+                  </TouchableOpacity>
+                  <Text style={styles.PlayAreaText}>Arena 56</Text>
+                </View>
+              </View>
+            ) : (
+              <>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    marginTop: 24,
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                  }}>
+                  <Text style={styles.PlayAreaText}>From</Text>
+                  <Image
+                    style={{width: 24, height: 24}}
+                    source={require('../../assets/images/icon/calendar.png')}
+                  />
+                </View>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    marginTop: 24,
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                  }}>
+                  <Text style={styles.PlayAreaText}>To</Text>
+                  <Image
+                    style={{width: 24, height: 24}}
+                    source={require('../../assets/images/icon/calendar.png')}
+                  />
+                </View>
+              </>
+            )}
+            <TouchableOpacity
+            onPress={()=> setfilterModal(false)}
+            style={[styles.ApplyBtn, {marginTop: 40}]}>
+              <Text
+                style={[
+                  styles.PlayAreaText,
+                  {color: constant.white, fontWeight: '500'},
+                ]}>
+                Apply
+              </Text>
+            </TouchableOpacity>
+            <Text
+            onPress={()=> setfilterModal(false)}
+              style={[
+                styles.PlayAreaText,
+                {
+                  color: constant.primaryColor,
+                  fontWeight: '500',
+                  marginTop: 28,
+                  textAlign: 'center',
+                },
+              ]}>
+              Cancel
+            </Text>
           </View>
         </View>
       </Modal>

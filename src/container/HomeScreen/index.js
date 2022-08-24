@@ -90,7 +90,7 @@ const Home = props => {
                     styles.switchInnerWrapper,
                     {
                       backgroundColor:
-                        selectedTab == 1 ? constant.white : constant.whiteGrey,
+                        selectedTab === 1 ? constant.white : constant.whiteGrey,
                     },
                   ]}>
                   <Text
@@ -98,7 +98,7 @@ const Home = props => {
                       styles.font12,
                       {
                         color:
-                          selectedTab == 1
+                          selectedTab === 1
                             ? constant.selectedBlack
                             : constant.noSelectedBlack,
                       },

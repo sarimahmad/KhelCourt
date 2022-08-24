@@ -58,6 +58,19 @@ export default StyleSheet.create({
     fontWeight: '300',
     color: '#757575',
   },
+  PlayAreaText: {
+    fontSize: 16,
+    fontWeight: '400',
+    color: constant.black,
+  },
+  EmptyBox: {
+    borderWidth: 1,
+    borderColor: '#CDCFD0',
+    height: 24,
+    width: 24,
+    marginRight: 16,
+    borderRadius: 2,
+  },
   ShadowVideo: {
     width: 43,
     height: 32,
@@ -69,4 +82,13 @@ export default StyleSheet.create({
     fontFamily: constant.interRegular,
     fontSize: 16,
   },
+  ApplyBtn:{
+    width: '100%',
+    borderRadius: 20,
+    alignSelf: 'center',
+    height: 48,
+    backgroundColor: constant.primaryColor,
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
 });

@@ -25,7 +25,10 @@ const Header = ({
       <View style={{flex: 0.15, alignItems: 'center'}}>
         {leftPress != undefined && leftPress != null && (
           <TouchableOpacity onPress={leftPress}>
-            <Ionicons size={24} color={leftIcon.color} name={leftIcon.name} />
+           <Image
+           style={{width: 24, height: 24}}
+           source={require('../../assets/images/icon/Left.png')}
+           />
           </TouchableOpacity>
         )}
          {leftComponent && leftComponent()}
