@@ -1,5 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, TouchableOpacity, Image, SafeAreaView,FlatList} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+  SafeAreaView,
+  FlatList,
+} from 'react-native';
 import {connect} from 'react-redux';
 import Header from '../../components/Header';
 import styles from './styles';
@@ -19,7 +26,7 @@ const Notification = props => {
         centerText={'KhelCourt'}
         backColor={constant.white}
         rightComponent={() => (
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => props.navigation.navigate('Cart')}>
             <Image
               style={{height: 25, width: 25}}
               source={require('../../assets/images/icon/shoppingCart.png')}

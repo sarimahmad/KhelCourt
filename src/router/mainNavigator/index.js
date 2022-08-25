@@ -13,6 +13,7 @@ import Detail from '../../container/Detail';
 import TeamDetail from '../../container/TeamDetails';
 import Cart from '../../container/Cart';
 import BookingSucess from '../../container/BookingSucess';
+import ProfileInformation from '../../container/ProfileInformation';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,7 +34,11 @@ function App(props) {
         <Stack.Screen name="TeamDetail" component={TeamDetail} />
         <Stack.Screen name="Cart" component={Cart} />
         <Stack.Screen name="BookingSucess" component={BookingSucess} />
-   </Stack.Navigator>
+        <Stack.Screen
+          name="ProfileInformation"
+          component={ProfileInformation}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

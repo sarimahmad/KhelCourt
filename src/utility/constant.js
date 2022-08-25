@@ -36,6 +36,7 @@ export default {
   borderColor: '#E3E5E5',
   titleLightColor: '#757575',
   black: 'black',
+  midBlack: '#444444',
   darkBlue: '#102733',
   tabColor: '#152F3E',
   whiteGrey: 'rgba(200,200,200,0.5)',

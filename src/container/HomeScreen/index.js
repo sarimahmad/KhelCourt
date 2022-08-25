@@ -32,7 +32,8 @@ const Home = props => {
               backColor={'rgba(0,0,0,0)'}
               rightComponent={() => (
                 <View style={{flexDirection: 'row'}}>
-                  <TouchableOpacity>
+                  <TouchableOpacity
+                    onPress={() => props.navigation.navigate('Cart')}>
                     <Image
                       style={{height: 30, width: 30, margin: 5}}
                       source={require('../../assets/images/icon/shopping-cart-white.png')}

@@ -8,8 +8,6 @@ import {
   ScrollView,
 } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {connect} from 'react-redux';
-
 import styles from './styles';
 import Header from '../../components/Header';
 import constant from '../../utility/constant';
@@ -184,7 +182,7 @@ const Profile = props => {
             <View style={[styles.menuItemWrapper, {marginTop: 8}]}>
               {!personalInfoOpen &&
                 renderCloseView('Personal Info', () =>
-                  setPersonalInfoOpen(!personalInfoOpen),
+                  props.navigation.navigate('ProfileInformation'),
                 )}
             </View>
             <View style={[styles.menuItemWrapper, {marginTop: 8}]}>
